@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resim Galerisi</title>
+    <link rel="stylesheet" href="imgdeneme.css">
+</head>
+<body>
+
+
+    <header class="header">
+
+        <!-- Navbar Başlangıcı -->
+        <nav class="navbar navbar-expand-lg">
+          <div class="img">
+            <img class="logo" src="LOGO.jpeg" alt="">
+          </div>
+          <div class="container1">
+            <!-- Navbar Menüsü -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Anasayfa</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Hizmetler</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Galeri</a>
+                </li>
+                <li class="nav-item">
+                  <!-- Telefon Yazısı ve İkonu (Yer değiştirdi) -->
+                  <a class="nav-link d-flex align-items-center" href="tel:+905443470803">
+                    <span class="phone-text">Telefon</span>
+                    <i class="bi bi-telephone-fill phone-icon"></i> <!-- İkonu sağa taşıdık -->
+                  </a>
+                </li>
+              </ul>
+    
+            </div>
+          </div>
+        </nav>
+      </header>
+
+   <!-- <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="img/logo.jpeg" alt=""></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">ANASAYFA</a></li>
+            <li><a href="gallery.html">GALERİ</a></li>
+            <li><a href="index.html">İLETİŞİM</a></li>
+            <li> <a href="tel:+90532 784 85 65">
+                    <img src="icons/telephone-fill.svg" alt="Telefon">
+                </a></li>
+        </ul>
+
+
+
+    </nav>-->
+
+
+
+    <div class="gallery">
+        <img src="https://via.placeholder.com/150" alt="Resim 1" class="gallery-item">
+        <img src="https://via.placeholder.com/150" alt="Resim 2" class="gallery-item">
+        <img src="https://via.placeholder.com/150" alt="Resim 3" class="gallery-item">
+    </div>
+
+    <!-- Büyük Resim İçin Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

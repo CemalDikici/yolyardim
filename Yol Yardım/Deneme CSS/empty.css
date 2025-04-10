@@ -1,0 +1,84 @@
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+/* Steps*/
+/* Başlık Ayarları */
+.system-works {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.system-works h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.system-works h2 span {
+    color: #d32f2f;
+}
+
+/* Adım Kutuları */
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step {
+    margin-right: -50px;
+    width: 300px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 170px;
+}
+
+.step-1 {
+    background-color: #424242; /* Siyah */
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+    z-index: 10;
+    width: 300px;
+
+}
+
+.step-2 {
+    background-color: #856464; /* Kırmızı */
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+    z-index: 5;
+
+}
+
+.step-3 {
+    background-color: #d32f2f; /* Kırmızı */
+    z-index: 0;
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+}
+
+/* Simgeler */
+.icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* Yazılar */
+.step h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.step h3 span {
+    color: #ffd600; /* Sarı vurgu */
+}
+
+.step p {
+    font-size: 14px;
+}

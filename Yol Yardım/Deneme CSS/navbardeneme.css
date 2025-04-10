@@ -1,0 +1,91 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    text-align: center;
+    padding: 20px;
+    background-color: #000050;
+    color: white;
+
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.menu-toggle {
+    background-color: #000050;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    
+}
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    visibility: hidden;
+}
+
+.menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffdd00;
+}
+
+/* Media Query: Küçük ekranlar için */
+@media screen and (max-width: 768px) {
+    .menu a {
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img {
+        width: 100%; /* Logo küçültüldü */
+        margin: 0 0 0 0;
+    }
+.navbar{
+    padding: 0 0 10px 0;
+    
+}
+    .menu a {
+        font-size: 14px;
+    }
+}

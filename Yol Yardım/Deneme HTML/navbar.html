@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telefon İkonlu Navbar</title>
+  <!-- Bootstrap CSS -->
+ 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+   
+    
+  </style>
+</head>
+<body>
+  <!-- Navbar Başlangıcı -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <!-- Toggle Butonu (Mobil İçin) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Menüsü -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Anasayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hizmetler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Galeri</a>
+          </li>
+          <li class="nav-item">
+             <!-- Telefon Yazısı ve İkonu (Yer değiştirdi) -->
+        <a class="nav-link d-flex align-items-center" href="tel:+905443470803">
+          <span class="phone-text">Telefon</span>
+          <i class="bi bi-telephone-fill phone-icon"></i> <!-- İkonu sağa taşıdık -->
+        </a>
+          </li>
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar Sonu -->
+
+  <!-- Bootstrap JS -->
+
+</body>
+</html>

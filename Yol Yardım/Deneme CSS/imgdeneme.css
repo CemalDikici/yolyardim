@@ -1,0 +1,91 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #0095ff; /* Mavi arka plan */
+    padding: 10px 0;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin-left: 15px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.phone-text {
+    margin-right: 5px;
+}
+
+.phone-icon {
+    color: white;
+    font-size: 16px;
+}
+
+/* Media Query: 768px ve altı ekranlar için */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .phone-text {
+        display: none; /* Küçük ekranlarda telefon metnini gizliyoruz */
+    }
+
+    .phone-icon {
+        margin-left: auto;
+    }
+}
+
+/* Media Query: 480px ve altı ekranlar için */
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 100px; /* Logo boyutunu küçültüyoruz */
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .navbar-nav {
+        gap: 10px;
+    }
+}

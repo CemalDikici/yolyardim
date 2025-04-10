@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --golden: #d4af37;
+  --silver: #c0c0c0;
+  --black: #000;
+
+  --bg-color: var(--black);
+  --text-color: var(--silver);
+  --title-color: var(--golden);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  color: white;
+  font-family: "Outfit";
+}
+
+/* helper */
+.white {
+  color: white;
+}
+
+/*blip*/
+.blipMain {
+  position: sticky;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.blipMain .blip {
+  transition: all 0.25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em 3em 0;
+  border-radius: 50%;
+  padding: 0.25em;
+  width: 80px;
+  height: 80px;
+  background-color: #c83131;
+  z-index: 1;
+}
+
+/*navbar*/
+.logo {
+  width: 150px;
+  display: inline;
+}
+
+.header {
+  padding: 0 150px 0 150px;
+  background-color: #000050;
+}
+
+.navbar {
+  background-color: rgb(0, 0, 80);
+  font-size: 18px;
+  /* Navbar boyutunu büyüttük */
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  /* Navbar'ın boyutunu biraz daha büyütmek için */
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+  font-size: 22px;
+  /* Yazı boyutunu 4px artırdık */
+  transition: all 0.3s ease;
+  /* Hover efektini yumuşatmak için geçiş ekledik */
+}
+
+.navbar .nav-link {
+  margin: 0 20px;
+  /* Menü öğeleri arasındaki boşluğu artırdık */
+  position: relative;
+  /* Konumlandırma ekledik, çizgi için */
+  text-decoration: none;
+}
+
+/* Menü Öğeleri Altında Hover Durumunda Çizgi */
+.navbar .nav-item .nav-link:hover {
+  text-decoration: none;
+}
+
+.navbar .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  /* Çizgi menü öğesinin hemen altına gelsin */
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  opacity: 0;
+  /* Başlangıçta görünmesin */
+  transition: opacity 0.3s ease;
+  /* Hover ile çizgi görünür olacak */
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.navbar .nav-item .nav-link:hover::after {
+  opacity: 1;
+  /* Hover olduğunda çizgi görünür olacak */
+}
+
+.phone-icon {
+  font-size: 1.2rem;
+  color: white;
+  /* Telefon ikonunun rengi beyaz oldu */
+  margin-left: 30px;
+  /* Telefon ikonu ile yazı arasına boşluk ekledik */
+}
+
+.phone-icon:hover {
+  text-decoration: none;
+  color: #f0f0f0;
+  /* Hover durumunda telefon ikonu rengi biraz açılır */
+}
+
+.container1 {
+  margin-top: 16px;
+}
+
+.container1 .collapse ul li,
+.container1 .collapse ul {
+  display: inline;
+}
+
+.phone-text {
+  font-size: 22px;
+  /* Yazı boyutunu artırdık */
+  margin-right: 10px;
+  /* Telefon yazısı ile ikonu arasına 10px boşluk ekledik */
+  transition: all 0.3s ease;
+}
+
+/*title*/
+.help {
+  text-align: center;
+  color: #000;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* boxs */
+.main {
+  display: block;
+  margin-top: 50px;
+  margin-left: 270px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.boxtitle {
+  margin-bottom: 10px;
+}
+
+.box {
+  height: 370px;
+}
+
+.content {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.size {
+  font-size: larger;
+}
+
+.blue {
+  width: 370px;
+  background-color: #000080;
+}
+
+.red {
+  width: 390px;
+  height: 410px;
+  background-color: #c83131;
+  margin-top: -20px;
+  margin-bottom: -10px;
+}
+
+.description {
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+
+.more {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.morediv {
+  background-color: #000000;
+  width: 150px;
+  height: 45px;
+  float: right;
+}
+
+#icerikler {
+  max-width: 400px;
+  font-size: 22px;
+  padding: 20px;
+  background-color: #000080;
+  color: white;
+}
+
+.icerik {
+  display: none;
+}
+
+.icerik.active {
+  display: block;
+}
+
+.mainNavigation {
+  display: block;
+  width: 78%;
+}
+
+.navigation {
+  float: right;
+}
+
+.nav-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  user-select: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-icon:hover {
+  color: #007bff;
+  transform: scale(1.2);
+  /* Hafif büyüme efekti */
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Steps*/
+/* Başlık Ayarları */
+.system-works {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.system-works h2 {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.system-works h2 span {
+  color: #d32f2f;
+}
+
+/* Adım Kutuları */
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step {
+  margin-right: -50px;
+  width: 300px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 170px;
+}
+
+.step-1 {
+  background-color: #000000;
+  /* Siyah */
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+  z-index: 10;
+  width: 300px;
+}
+
+.step-2 {
+  background-color: #000080;
+  /* Kırmızı */
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+  z-index: 5;
+}
+
+.step h3 .tools {
+  margin-bottom: 3px;
+}
+
+.step-3 {
+  background-color: #c83131;
+  /* Kırmızı */
+  z-index: 0;
+  width: 350px;
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+}
+
+/* Simgeler */
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* Yazılar */
+.step h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.step h3 span {
+  color: #c83131;
+  /* Sarı vurgu */
+}
+
+.step h3 .red-span {
+  color: #000080;
+}
+
+.step p {
+  font-size: 14px;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding: auto;
+  z-index: -1;
+  background-color: #000080;
+  backdrop-filter: blur(35px);
+  box-shadow: 0px 0px 40px rgba(169, 170, 181, 0.696);
+  font-size: 90%;
+  margin-top: 200px;
+}
+
+.footer-co .footer-tittle {
+  margin-bottom: -10px;
+}
+
+.citys {
+  margin-bottom: -15px;
+  margin-top: -20px;
+}
+
+.footer-col {
+  width: 33%;
+  height: 350px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.footer-col .info p:hover {
+  color: white;
+  padding-left: 10px;
+}
+
+.footer-col .h2 {
+  margin-left: 11px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 25px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.footer-col a {
+  display: inline;
+  font-size: 19px;
+  text-transform: none;
+  color: var(--silver);
+  text-decoration: none;
+  transition: 0.4s;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.footer-col a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.footer-col p {
+  display: block;
+  font-size: 19px;
+  text-transform: none;
+  color: #bdb6b6;
+  text-decoration: none;
+  transition: 0.4s;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.circle {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  color: white;
+  padding-left: 8px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.circle-2 {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  transition: 0.4s;
+  padding-left: 8px;
+}
+
+.footer-col .text {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.footer-col .text:hover {
+  color: white;
+  padding-left: 10px;
+}
+
+.footer {
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.icon {
+  top: 170px;
+  right: 400px;
+}
+
+.footer div a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer div a:hover {
+  color: var(--yelloww);
+}
